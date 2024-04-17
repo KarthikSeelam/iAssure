@@ -10,3 +10,8 @@
 .css-10hburv-MuiTypography-root.active {
      color: "#2B3B7B"
 }
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+     top: 105px !important;
+     border-radius: 0 16px 0 0;
+     border-top: 1px solid #ddd;
+ }

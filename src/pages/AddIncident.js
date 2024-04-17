@@ -200,12 +200,13 @@ const AddIncident = () => {
                                     <div className='col-md-3'>
                                         <Form.Group className="mb-3 riskrating" controlId="exampleForm.ControlInput1">
                                             <Form.Label className='text_color '>Risk Rating <span className='star'>*</span></Form.Label>
-                                            <TextField sx={{ width:'100%', border:'1px solid #ddd',height: '40px', borderRadius:'4px',padding:'4px 10px'}}
+                                            <TextField style={{ width:'100%', border:'1px solid #ddd',height: '40px', borderRadius:'4px',padding:'4px 10px'}}
                                             id="standard-number"
                                             type="number"
                                             InputLabelProps={{
                                                 shrink: true,
                                             }}
+                                            
                                             variant="outlined"
                                             />
                                         </Form.Group>
@@ -224,6 +225,21 @@ const AddIncident = () => {
                                             <Form.Label className='text_color'>Case Description <span className='star'>*</span></Form.Label>
                                             <Form.Control as="textarea" rows={1} />
                                         </Form.Group>
+                                    </div>
+                                    <div className='col-md-6 mt-1'>
+                                        <label className='text_color'>Upload Attachment</label>
+                                        <Button
+                                            fullWidth
+                                            component="label"
+                                            role={undefined}
+                                            variant="secondary"
+                                            tabIndex={-1}
+                                            style={{ backgroundColor: "rgb(241,240,239)", padding: "8px 0",marginTop:'10px', textTransform: "capitalize" }}
+                                        // startIcon={<CloudUploadIcon />}
+                                        >
+                                            Drag and drop your files or  <span style={{ textDecoration: "underline", marginLeft: "5px" }}>Browse</span>
+                                            <VisuallyHiddenInput type="file" />
+                                        </Button>
                                     </div>
                                     <div className='col-md-3'>
                                         <FormControl>
@@ -247,52 +263,7 @@ const AddIncident = () => {
 
 
 
-                        {/* <strong>Case summary</strong> */}
-                        <h5 style={{ fontWeight: "bold", marginTop: "30px" }}>Case summary</h5>
-                        <div className='mt-4'>
-                            <div className='row'>
-                                <div className='col-md-3'>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label className='text_color '>Subject <span className='star'>*</span></Form.Label>
-                                        <Form.Control type="text" placeholder="Subject" />
-                                    </Form.Group>
-                                </div>
-                                <div className='col-md-3'>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Label className='text_color'>Case Description <span className='star'>*</span></Form.Label>
-                                        <Form.Control as="textarea" rows={1} />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className='row mt-4'>
-                                {/* <div className='col-md-3'>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Label className='text_color'>Case Description <span className='star'>*</span></Form.Label>
-                                        <Form.Control as="textarea" rows={3} />
-                                    </Form.Group>
-                                </div> */}
-
-                                {/* <div className='row'> */}
-                                <div className='col-md-8'>
-                                    <label className='text_color'>Upload Attachment</label>
-                                    <Button
-                                        fullWidth
-                                        component="label"
-                                        role={undefined}
-                                        variant="secondary"
-                                        tabIndex={-1}
-                                        style={{ backgroundColor: "rgb(241,240,239)", padding: "15px", textTransform: "capitalize" }}
-                                    // startIcon={<CloudUploadIcon />}
-                                    >
-                                        Drag and drop your files or  <span style={{ textDecoration: "underline", marginLeft: "5px" }}>Browse</span>
-                                        <VisuallyHiddenInput type="file" />
-                                    </Button>
-                                </div>
-
-                            </div>
-                            {/* </div> */}
-                        </div>
-
+                      
                     </div>
 
 
