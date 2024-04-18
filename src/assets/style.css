@@ -36,7 +36,7 @@ header h3 { color: #2B3B7B; font-weight: 600;}
 .summary-coming{ color:#6CB765;}
 .graph-img img { width: 100%;height: auto;}
 
-.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {top: 105px !important; border-radius: 0 16px 0 0; border-top: 1px solid #ddd;}
+.sidebar-top .MuiDrawer-paper{top: 105px !important; border-radius: 0 16px 0 0; border-top: 1px solid #ddd;}
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {     color: #fa531c !important;}
 .date-block .MuiInputBase-input { padding: 13px 14px;}
 .MuiStack-root { padding-top: 0px !important;}
