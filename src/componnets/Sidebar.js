@@ -177,7 +177,7 @@ export default function Sidebar() {
             {open ? (theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />) : <ChevronRightIcon />}
           </IconButton>
              */}
-            <Drawer variant="permanent" open={open} className="sidebar-top">
+            <Drawer variant="permanent" open={open}>
                 <IconButton
                     color="inherit"
                     aria-label="open drawer"

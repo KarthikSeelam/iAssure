@@ -36,7 +36,7 @@ header h3 { color: #2B3B7B; font-weight: 600;}
 .summary-coming{ color:#6CB765;}
 .graph-img img { width: 100%;height: auto;}
 
-.sidebar-top .MuiDrawer-paper{top: 105px !important; border-radius: 0 16px 0 0; border-top: 1px solid #ddd;}
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {top: 105px !important; border-radius: 0 16px 0 0; border-top: 1px solid #ddd;}
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {     color: #fa531c !important;}
 .date-block .MuiInputBase-input { padding: 13px 14px;}
 .MuiStack-root { padding-top: 0px !important;}
@@ -119,7 +119,7 @@ header h3 { color: #2B3B7B; font-weight: 600;}
     font-size: 20px;
 }
 .text_color {
-    color: #212529;
+    color: #2a4085;
     font-size: 16px;
     font-weight: 500;
 }
@@ -127,7 +127,16 @@ header h3 { color: #2B3B7B; font-weight: 600;}
     background:#A9ECFF !important;color:#2B3B7B; border-left: 6px solid #2D2D61 !important;
 }
 
-
+.sub_head {
+    font-weight: bold;
+    color:#00a0e3;
+}
+.input_border{
+    border: 1px solid #4a6bce !important;
+}
+.radio_color{
+    color: #4a6bce !important;
+}
 
 /* IncidentResolve */
 .detail-list label{ color: #000; font-weight: 500;width: 30%; }
@@ -140,5 +149,5 @@ header h3 { color: #2B3B7B; font-weight: 600;}
 .btn-close { position: relative;top: -28px; right: -17px; font-size: 11px;}
 .MuiDrawer-root .MuiDrawer-docked .css-4gciz5-MuiDrawer-docked {z-index: 1;}
 .date-bg input {padding: 6px 8px;}
-.riskrating .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {padding: 4px 0 5px !important; }
+.riskrating .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {padding: 4px 0 5px; }
 

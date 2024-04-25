@@ -28,17 +28,6 @@ const VisuallyHiddenInput = styled('input')({
 
 
 const AddIncident = () => {
-    const [category, setCategory] = useState('');
-    const [showCustomerName, setShowCustomerName] = useState(false);
-    const [showSupplierName, setShowSupplierName] = useState(false)
-
-    const handleCategoryChange = (event) => {
-        const selectedCategory = event.target.value;
-        setCategory(selectedCategory);
-        setShowCustomerName(selectedCategory === 'customer');
-        setShowSupplierName(selectedCategory === 'supplier')
-    };
-
 
     return (
         <div>
@@ -62,132 +51,98 @@ const AddIncident = () => {
                         {/* Case details */}
                         <div className='mt-4'>
                             {/* <strong>Case summary</strong> */}
-                            <h5 style={{ fontWeight: "bold" }}>Case Details</h5>
+                            <h5 className='sub_head'>Case Details</h5>
                             <div className='mt-4'>
                                 <div className='row'>
-                                    <div className='col-md-3'>
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Location <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example" onChange={handleCategoryChange} value={category}>
-                                                <option>Select Location</option>
-                                                <option value="UK">UK</option>
-                                                <option value="US" >US</option>
-                                                <option value="Paris">Paris</option>
-                                                <option value="Germany">Germany</option>
-                                                <option value="Italy">Italy</option>
-                                                <option value="France">France</option>
+                                            <Form.Label className='text_color'>Source <span className='star'>*</span></Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Source</option>
+                                                <option value="1">Phone call</option>
+                                                <option value="2">Mail</option>
+                                                <option value="3">Production line</option>
                                             </Form.Select>
                                         </Form.Group>
                                     </div>
-                                    <div className='col-md-3'>
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Reported by <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
-                                                <option>Select</option>
-                                                <option value="Report1">Report1</option>
-                                                <option value="Report2" >Report2</option>
+                                            <Form.Label className='text_color'>Product name <span className='star'>*</span></Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Product</option>
+                                                <option value="1">Product 1</option>
+                                                <option value="2">Product 2</option>
+                                                <option value="3">Product 3</option>
+                                                <option value="4">Product 4</option>
                                             </Form.Select>
                                         </Form.Group>
                                     </div>
-                                    <div className='col-md-3'>
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Department <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
-                                                <option>Select Department</option>
-                                                <option value="Department1">Department1</option>
-                                                <option value="Department2" >Department2</option>
+                                            <Form.Label className='text_color'>Issue type <span className='star'>*</span></Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Issue</option>
+                                                <option value="issue">Audit</option>
+                                                <option value="issue" >Qulaity</option>
+                                                <option value="issue" >Security</option>
                                             </Form.Select>
                                         </Form.Group>
                                     </div>
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Affected Product  <span className='star'>*</span></Form.Label>
-                                            <Form.Control type="text" placeholder="Enter Affected Product " />
-                                        </Form.Group>
-                                    </div>
 
-
-
-
-                                    {/* {showCustomerName && <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Customer Name <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
-                                                <option>Please select the Customer</option>
-                                                <option value="1">Internal</option>
-                                                <option value="2">Food Link</option>
-                                                <option value="3">Cordina Chickens Pty Ltd</option>
-                                                <option value="4">M & J Chickens Pty Ltd</option>
-                                                <option value="5">Game Farm Galston</option>
-                                            </Form.Select>
-                                        </Form.Group>
-                                    </div>}
-
-                                    {showSupplierName &&
-                                        <div className='col-md-3'>
-                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                                <Form.Label className='text_color'>Supplier Name <span className='star'>*</span></Form.Label>
-                                                <Form.Select aria-label="Default select example">
-                                                    <option>Please select the Supplier</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </Form.Select>
-                                            </Form.Group>
-                                        </div>} */}
 
                                 </div>
                                 <div className='row'>
-                                    <div className='col-md-3'>
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Batch/Lot  <span className='star'>*</span></Form.Label>
-                                            <Form.Control type="text" placeholder="Enter Batch/Lot" />
-                                        </Form.Group>
-                                    </div>
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Product Code   <span className='star'>*</span></Form.Label>
-                                            <Form.Control type="text" s="Enter Product Code " />
-                                        </Form.Group>
-                                    </div>
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Initiating Reason    <span className='star'>*</span></Form.Label>
-                                            <Form.Control type="text" s="Enter Initiating Reason " />
-                                        </Form.Group>
-                                    </div>
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Person Responsible for action <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
-                                                <option>Please select Action</option>
-                                                <option value="1">Internal</option>
-                                                <option value="2">Food Link</option>
-                                                <option value="3">Cordina Chickens Pty Ltd</option>
-                                                <option value="4">M & J Chickens Pty Ltd</option>
-                                                <option value="5">Game Farm Galston</option>
+                                            <Form.Label className='text_color'>Issue Area <span className='star'>*</span></Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Issue Area</option>
+                                                <option value="1">Footwear</option>
+                                                <option value="2">Apparel</option>
+                                                <option value="3">Leather Boots</option>
+                                                <option value="4">Production Components and Materials</option>
+                                                <option value="5">Work Inprogress</option>
+                                                <option value="6">Finished Product waiting for distribution</option>
                                             </Form.Select>
                                         </Form.Group>
                                     </div>
+                                    {/* <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color '>Product Code</Form.Label>
+                                            <Form.Control className='input_border' type="text" placeholder="Enter Product Code " />
+                                        </Form.Group>
+                                    </div> */}
+                                     <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color'>Risk type <span className='star'>*</span></Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Risk type</option>
+                                                <option value="1">Risk type 1</option>
+                                                <option value="2">Risk type 2</option>
+                                                <option value="3">Risk type 3</option>
+                                                <option value="4">Risk type 4</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </div>
+                                    <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color'>Supplier Name</Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select the Supplier</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </div>
+
+
                                 </div>
                                 <div className='row'>
-                                    <div className='col-md-3'>
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>cc'd teams <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
-                                                <option>Please select Teams</option>
-                                                <option value="1">Internal</option>
-                                                <option value="2">Food Link</option>
-                                                <option value="3">Cordina Chickens Pty Ltd</option>
-                                                <option value="4">M & J Chickens Pty Ltd</option>
-                                                <option value="5">Game Farm Galston</option>
-                                            </Form.Select>
-                                        </Form.Group>
-                                    </div>
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color'>Severity <span className='star'>*</span></Form.Label>
-                                            <Form.Select aria-label="Default select example">
+                                            <Form.Label className='text_color'>Severity</Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
                                                 <option>Please select Severity</option>
                                                 <option value="1">Critical</option>
                                                 <option value="2">High</option>
@@ -196,37 +151,65 @@ const AddIncident = () => {
                                             </Form.Select>
                                         </Form.Group>
                                     </div>
-                                    
-                                    <div className='col-md-3'>
-                                        <Form.Group className="mb-3 riskrating" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Risk Rating <span className='star'>*</span></Form.Label>
-                                            <TextField style={{ width:'100%', border:'1px solid #ddd',height: '40px', borderRadius:'4px',padding:'4px 10px'}}
-                                            id="standard-number"
-                                            type="number"
-                                            InputLabelProps={{
-                                                shrink: true,
-                                            }}
-                                            
-                                            variant="outlined"
-                                            />
-                                        </Form.Group>
-                                    </div>
-                                    <div className='col-md-3'>
+                                   
+                                    <div className='col-md-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                            <Form.Label className='text_color '>Response Due date <span className='star'>*</span></Form.Label>
-                                            <TextField type="date" variant="outlined" className='date-bg'  style={{border:'1px solid #ddd',borderRadius:'4px',padding:'0px 12px', background:'#fff', width:'100%'}}/>
+                                            <Form.Label className='text_color '>Product Code</Form.Label>
+                                            <Form.Control className='input_border' type="text" placeholder="Enter Product Code " />
                                         </Form.Group>
                                     </div>
+                                    <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color '>Due date</Form.Label>
+                                            <TextField className='input_border date-bg' type="date" variant="outlined" style={{ border: '1px solid #ddd', borderRadius: '4px', padding: '0px 12px', background: '#fff', width: '100%' }} />
+                                        </Form.Group>
+                                    </div>
+
+                                </div>
+
+                                <div className='row'>
+
+                                    <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color'>Assigned To/Person</Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select Person</option>
+                                                <option value="1">Person 1</option>
+                                                <option value="2">Person 2</option>
+                                                <option value="3">Person 3</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </div>
+                                    <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color'>CC </Form.Label>
+                                            <Form.Select className='input_border' aria-label="Default select example">
+                                                <option>Please select CC</option>
+                                                <option value="1">CC 1</option>
+                                                <option value="2">CC 2</option>
+                                                <option value="3">CC 3</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </div>
+                                    <div className='col-md-4'>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Label className='text_color '>Batch number</Form.Label>
+                                            <Form.Control className='input_border' type="text" placeholder="Enter Batch number " />
+                                        </Form.Group>
+                                    </div>
+
+
+
                                 </div>
                                 <div className='row'>
-                                    
-                                    <div className='col-md-3'>
+                                <div className='col-md-6'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                            <Form.Label className='text_color'>Case Description <span className='star'>*</span></Form.Label>
-                                            <Form.Control as="textarea" rows={1} />
+                                            <Form.Label className='text_color'>Case Description</Form.Label>
+                                            <Form.Control className='input_border' as="textarea" rows={3} placeholder='Write the description' />
                                         </Form.Group>
                                     </div>
-                                    <div className='col-md-6 mt-1'>
+
+                                    <div className='col-md-12'>
                                         <label className='text_color'>Upload Attachment</label>
                                         <Button
                                             fullWidth
@@ -234,36 +217,18 @@ const AddIncident = () => {
                                             role={undefined}
                                             variant="secondary"
                                             tabIndex={-1}
-                                            style={{ backgroundColor: "rgb(241,240,239)", padding: "8px 0",marginTop:'10px', textTransform: "capitalize" }}
+                                            style={{ backgroundColor: "rgb(241,240,239)", padding: "15px", textTransform: "capitalize", marginTop: "10px" }}
                                         // startIcon={<CloudUploadIcon />}
                                         >
                                             Drag and drop your files or  <span style={{ textDecoration: "underline", marginLeft: "5px" }}>Browse</span>
                                             <VisuallyHiddenInput type="file" />
                                         </Button>
                                     </div>
-                                    <div className='col-md-3'>
-                                        <FormControl>
-                                            <Form.Label className='text_color'>Serious <span className='star'>*</span></Form.Label>
-                                            <RadioGroup
-                                                row
-                                                aria-labelledby="demo-row-radio-buttons-group-label"
-                                                name="row-radio-buttons-group"
-                                            >
-                                                <FormControlLabel value="yes" control={<Radio />} label="Yes" />
-                                                <FormControlLabel value="no" control={<Radio />} label="No" />
-                                            </RadioGroup>
-                                        </FormControl>
-                                    </div>
                                 </div>
-
                             </div>
 
                         </div>
 
-
-
-
-                      
                     </div>
 
 
